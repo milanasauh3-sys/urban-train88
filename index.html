@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Комикс</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+
+<div id="orientation-warning">
+    <h2>Поверните устройство</h2>
+</div>
+
+<div class="app-container">
+    <nav class="sidebar-nav">
+        <!-- 1. Главная -->
+        <button class="nav-icon active" data-target="page-home" title="Главная">
+            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+        </button>
+        <!-- 2. Голосование -->
+        <button class="nav-icon" data-target="page-voting" title="Голосование">
+            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>
+        </button>
+        <!-- 3. Комикс -->
+        <button class="nav-icon" data-target="page-comic" title="Комикс">
+            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+        </button>
+        <!-- 4. База данных -->
+        <button class="nav-icon" data-target="page-database" title="База данных">
+            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4z"/></svg>
+        </button>
+        <!-- 5. Личный кабинет -->
+        <button class="nav-icon" data-target="page-cabinet" title="Кабинет">
+            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2L2 12h3v8h5v-6h4v6h5v-8h3L12 2z"/></svg>
+        </button>
+
+        <!-- 8. Переключатель темы (в самом низу после домика) -->
+        <button id="theme-toggle" class="theme-btn" title="Сменить тему">
+            <span class="theme-icon">🌙</span>
+        </button>
+    </nav>
+
+    <main class="content-viewport">
+        <section id="page-home" class="page active">
+            <div class="hero-layout">
+                <div class="char-box">
+                    <span>Область главных персонажей (6)</span>
+                </div>
+                <div class="right-column">
+                    <div class="text-note-box">
+                        <div class="logo-circle"><span>Лого</span></div>
+                        <p>[Сноска для текста (9)]</p>
+                    </div>
+                    <button class="cta-journey-btn" data-target="page-comic">Начать путешествие ➔</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="page-comic" class="page"><h2>Раздел Комикса</h2></section>
+        <section id="page-voting" class="page"><h2>Раздел Голосования</h2></section>
+        <section id="page-database" class="page"><h2>База Данных</h2></section>
+        <section id="page-cabinet" class="page"><h2>Личный Кабинет</h2></section>
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
